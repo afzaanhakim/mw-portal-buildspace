@@ -17,7 +17,15 @@ const [owner, randomPerson] = await hre.ethers.getSigners();// wallet address of
   let waveTxn = await waveContract.wave();
   await waveTxn.wait();//attempt a wave 
 
+
+
   waveCount = await waveContract.getTotalWaves();//manually grab new total of waves
+
+  waveTxn = await waveContract.connect(randomPerson).wave();
+  //trying random wallet address to get to wave
+  waveCount = await waveContract.getTotalWaves();
+  //checking if wave updates correctly by calling again
+  
 }
 
 
