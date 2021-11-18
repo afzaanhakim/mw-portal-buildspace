@@ -16,4 +16,11 @@ function wave() public {
   console.log("%s has waved!", msg.sender); //msg.sender = wallet address of persin calling the wave function  
 }
 
+function getTotalWaves() public view returns (uint256) {
+
+  console.log("there are %d total waves", totalWaves);
+  return totalWaves;
+  //function to get toital number of waves
+}
+
 }
